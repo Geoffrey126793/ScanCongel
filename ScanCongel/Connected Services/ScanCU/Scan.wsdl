@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/Scan" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Scan" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Scan" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="PutAwayPallet">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="sSCCNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newBin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PutAwayPallet_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PutAwayPalletWithUser">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="sSCCNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newBin" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="user" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PutAwayPalletWithUser_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="AddPickingPallet">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="sSCC" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="orderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="lineNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="qty" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddPickingPallet_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="AddPickingPalletWithUser">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="sSCC" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="orderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="lineNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="qty" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="user" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddPickingPalletWithUser_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ValidatePicking">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="orderNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ValidatePicking_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ValidatePickingWithUser">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="orderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="user" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ValidatePickingWithUser_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ValidatePurchOrder">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="cmd" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="expectedReceiptDt" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="magasin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ValidatePurchOrder_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="MakeOTSFromPurchOrder">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="cmd" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="expectedReceiptDt" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="magasin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="MakeOTSFromPurchOrder_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PrintLabel">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="sSCCNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintLabel_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PrintReceipt">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="receive" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="quai" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintReceipt_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PrintFichePaletteProduction">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="sSCC" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintFichePaletteProduction_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ValidatePaletteProduction">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="sSCC" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ValidatePaletteProduction_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="TftFromProdToCongel">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="sSCC" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="TftFromProdToCongel_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PalletInventory">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="sSCC" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newQuantity" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="user" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PalletInventory_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="PutAwayPallet">
+    <part name="parameters" element="tns:PutAwayPallet" />
+  </message>
+  <message name="PutAwayPallet_Result">
+    <part name="parameters" element="tns:PutAwayPallet_Result" />
+  </message>
+  <message name="PutAwayPalletWithUser">
+    <part name="parameters" element="tns:PutAwayPalletWithUser" />
+  </message>
+  <message name="PutAwayPalletWithUser_Result">
+    <part name="parameters" element="tns:PutAwayPalletWithUser_Result" />
+  </message>
+  <message name="AddPickingPallet">
+    <part name="parameters" element="tns:AddPickingPallet" />
+  </message>
+  <message name="AddPickingPallet_Result">
+    <part name="parameters" element="tns:AddPickingPallet_Result" />
+  </message>
+  <message name="AddPickingPalletWithUser">
+    <part name="parameters" element="tns:AddPickingPalletWithUser" />
+  </message>
+  <message name="AddPickingPalletWithUser_Result">
+    <part name="parameters" element="tns:AddPickingPalletWithUser_Result" />
+  </message>
+  <message name="ValidatePicking">
+    <part name="parameters" element="tns:ValidatePicking" />
+  </message>
+  <message name="ValidatePicking_Result">
+    <part name="parameters" element="tns:ValidatePicking_Result" />
+  </message>
+  <message name="ValidatePickingWithUser">
+    <part name="parameters" element="tns:ValidatePickingWithUser" />
+  </message>
+  <message name="ValidatePickingWithUser_Result">
+    <part name="parameters" element="tns:ValidatePickingWithUser_Result" />
+  </message>
+  <message name="ValidatePurchOrder">
+    <part name="parameters" element="tns:ValidatePurchOrder" />
+  </message>
+  <message name="ValidatePurchOrder_Result">
+    <part name="parameters" element="tns:ValidatePurchOrder_Result" />
+  </message>
+  <message name="MakeOTSFromPurchOrder">
+    <part name="parameters" element="tns:MakeOTSFromPurchOrder" />
+  </message>
+  <message name="MakeOTSFromPurchOrder_Result">
+    <part name="parameters" element="tns:MakeOTSFromPurchOrder_Result" />
+  </message>
+  <message name="PrintLabel">
+    <part name="parameters" element="tns:PrintLabel" />
+  </message>
+  <message name="PrintLabel_Result">
+    <part name="parameters" element="tns:PrintLabel_Result" />
+  </message>
+  <message name="PrintReceipt">
+    <part name="parameters" element="tns:PrintReceipt" />
+  </message>
+  <message name="PrintReceipt_Result">
+    <part name="parameters" element="tns:PrintReceipt_Result" />
+  </message>
+  <message name="PrintFichePaletteProduction">
+    <part name="parameters" element="tns:PrintFichePaletteProduction" />
+  </message>
+  <message name="PrintFichePaletteProduction_Result">
+    <part name="parameters" element="tns:PrintFichePaletteProduction_Result" />
+  </message>
+  <message name="ValidatePaletteProduction">
+    <part name="parameters" element="tns:ValidatePaletteProduction" />
+  </message>
+  <message name="ValidatePaletteProduction_Result">
+    <part name="parameters" element="tns:ValidatePaletteProduction_Result" />
+  </message>
+  <message name="TftFromProdToCongel">
+    <part name="parameters" element="tns:TftFromProdToCongel" />
+  </message>
+  <message name="TftFromProdToCongel_Result">
+    <part name="parameters" element="tns:TftFromProdToCongel_Result" />
+  </message>
+  <message name="PalletInventory">
+    <part name="parameters" element="tns:PalletInventory" />
+  </message>
+  <message name="PalletInventory_Result">
+    <part name="parameters" element="tns:PalletInventory_Result" />
+  </message>
+  <portType name="Scan_Port">
+    <operation name="PutAwayPallet">
+      <input name="PutAwayPallet" message="tns:PutAwayPallet" />
+      <output name="PutAwayPallet_Result" message="tns:PutAwayPallet_Result" />
+    </operation>
+    <operation name="PutAwayPalletWithUser">
+      <input name="PutAwayPalletWithUser" message="tns:PutAwayPalletWithUser" />
+      <output name="PutAwayPalletWithUser_Result" message="tns:PutAwayPalletWithUser_Result" />
+    </operation>
+    <operation name="AddPickingPallet">
+      <input name="AddPickingPallet" message="tns:AddPickingPallet" />
+      <output name="AddPickingPallet_Result" message="tns:AddPickingPallet_Result" />
+    </operation>
+    <operation name="AddPickingPalletWithUser">
+      <input name="AddPickingPalletWithUser" message="tns:AddPickingPalletWithUser" />
+      <output name="AddPickingPalletWithUser_Result" message="tns:AddPickingPalletWithUser_Result" />
+    </operation>
+    <operation name="ValidatePicking">
+      <input name="ValidatePicking" message="tns:ValidatePicking" />
+      <output name="ValidatePicking_Result" message="tns:ValidatePicking_Result" />
+    </operation>
+    <operation name="ValidatePickingWithUser">
+      <input name="ValidatePickingWithUser" message="tns:ValidatePickingWithUser" />
+      <output name="ValidatePickingWithUser_Result" message="tns:ValidatePickingWithUser_Result" />
+    </operation>
+    <operation name="ValidatePurchOrder">
+      <input name="ValidatePurchOrder" message="tns:ValidatePurchOrder" />
+      <output name="ValidatePurchOrder_Result" message="tns:ValidatePurchOrder_Result" />
+    </operation>
+    <operation name="MakeOTSFromPurchOrder">
+      <input name="MakeOTSFromPurchOrder" message="tns:MakeOTSFromPurchOrder" />
+      <output name="MakeOTSFromPurchOrder_Result" message="tns:MakeOTSFromPurchOrder_Result" />
+    </operation>
+    <operation name="PrintLabel">
+      <input name="PrintLabel" message="tns:PrintLabel" />
+      <output name="PrintLabel_Result" message="tns:PrintLabel_Result" />
+    </operation>
+    <operation name="PrintReceipt">
+      <input name="PrintReceipt" message="tns:PrintReceipt" />
+      <output name="PrintReceipt_Result" message="tns:PrintReceipt_Result" />
+    </operation>
+    <operation name="PrintFichePaletteProduction">
+      <input name="PrintFichePaletteProduction" message="tns:PrintFichePaletteProduction" />
+      <output name="PrintFichePaletteProduction_Result" message="tns:PrintFichePaletteProduction_Result" />
+    </operation>
+    <operation name="ValidatePaletteProduction">
+      <input name="ValidatePaletteProduction" message="tns:ValidatePaletteProduction" />
+      <output name="ValidatePaletteProduction_Result" message="tns:ValidatePaletteProduction_Result" />
+    </operation>
+    <operation name="TftFromProdToCongel">
+      <input name="TftFromProdToCongel" message="tns:TftFromProdToCongel" />
+      <output name="TftFromProdToCongel_Result" message="tns:TftFromProdToCongel_Result" />
+    </operation>
+    <operation name="PalletInventory">
+      <input name="PalletInventory" message="tns:PalletInventory" />
+      <output name="PalletInventory_Result" message="tns:PalletInventory_Result" />
+    </operation>
+  </portType>
+  <binding name="Scan_Binding" type="tns:Scan_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="PutAwayPallet">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:PutAwayPallet" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PutAwayPallet">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PutAwayPallet_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PutAwayPalletWithUser">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:PutAwayPalletWithUser" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PutAwayPalletWithUser">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PutAwayPalletWithUser_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AddPickingPallet">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:AddPickingPallet" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AddPickingPallet">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AddPickingPallet_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AddPickingPalletWithUser">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:AddPickingPalletWithUser" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AddPickingPalletWithUser">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AddPickingPalletWithUser_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ValidatePicking">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:ValidatePicking" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ValidatePicking">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ValidatePicking_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ValidatePickingWithUser">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:ValidatePickingWithUser" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ValidatePickingWithUser">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ValidatePickingWithUser_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ValidatePurchOrder">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:ValidatePurchOrder" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ValidatePurchOrder">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ValidatePurchOrder_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="MakeOTSFromPurchOrder">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:MakeOTSFromPurchOrder" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="MakeOTSFromPurchOrder">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="MakeOTSFromPurchOrder_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintLabel">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:PrintLabel" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintLabel">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintLabel_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintReceipt">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:PrintReceipt" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintReceipt">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintReceipt_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintFichePaletteProduction">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:PrintFichePaletteProduction" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintFichePaletteProduction">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintFichePaletteProduction_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ValidatePaletteProduction">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:ValidatePaletteProduction" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ValidatePaletteProduction">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ValidatePaletteProduction_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="TftFromProdToCongel">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:TftFromProdToCongel" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="TftFromProdToCongel">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="TftFromProdToCongel_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PalletInventory">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Scan:PalletInventory" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PalletInventory">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PalletInventory_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Scan">
+    <port name="Scan_Port" binding="tns:Scan_Binding">
+      <address location="http://srvnavision.europacuisson.local:7057/DynamicsNAV/WS/EC%20D%C3%A9marrage/Codeunit/Scan" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>
